@@ -1,0 +1,104 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(10,auto);
+    grid-template-rows: repeat(10,auto);
+    grid-gap: 1px;
+    
+}
+
+.grids { 
+    border: 2px solid black;
+    border-style: solid;
+    border-radius: 12px;
+    width: 0px;
+    margin: 0px;
+    padding: 5px; 
+    transition: transform 0.5s;
+   ;
+
+
+}
+#random:hover{
+    animation:vibration 0.5s;
+   
+}
+
+    
+
+@keyframes vibration {
+    0%{
+        transform: translateY(20%);
+    }
+    15%{
+        transform: translateX(20%);
+    }
+    35%{
+        transform: translateX(-20%);
+    }
+    45%{
+        transform: translateY(20%);
+    }
+    55%{
+        transform: translateY(-20%);
+    }
+    65%{
+        transform: translateX(20%);
+    }
+    95%{
+        transform: translateY(20%);
+    }
+    100%{
+        transform: translateX(-20%);
+    }
+
+}
+
+#right:hover{
+    transform: translateX(20%);
+    box-shadow:1px 1px ;
+}
+#left:hover{
+ transform: translate(-20%);
+ box-shadow:1px 1px ;
+}
+#down:hover{
+ transform: translateY(20%);
+ box-shadow:1px 1px ;
+}
+#up:hover{
+  transform: translateY(-20%);
+  box-shadow:1px 1px ;
+}
+#diagonal:hover{
+  transform:translate(20%,20%); 
+  box-shadow:1px 1px ;
+}
+#diagonalup:hover{
+  transform: translate(-20%,-20%);
+  box-shadow:1px 1px ;
+}
+#random:hover{
+box-shadow:1px 1px ;
+
+}
+#tiltedup:hover{
+  transform: translate(20%,-20% );
+}
+#tilteddown:hover{
+  transform: translate(-20%,20% );
+}
+
+ #sp{
+    background-color: aquamarine;
+    
+}
+#sp:hover{
+    /* background-color: red; */
+    animation:vibration 0.5s;
+
+    
+}
+#sp:active{
+    background:black;
+    
+}
