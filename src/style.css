@@ -1,0 +1,242 @@
+.title{
+    grid-area: title;
+    align-content: center;
+    text-align: center;
+}
+.message1{
+    grid-area: left;
+}
+.message2{
+    grid-area: right;
+}
+.flex-container{
+    display:grid;
+    align-content: center;
+    gap: 13px 20px;
+    grid-template-columns: 10fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10fr ;
+    grid-template-areas:'title title title title title title title title title title title title'
+                        'left . . . . . . . . . . right'
+                        'left . . . . . . . . . . right'
+                        'left . . . . . . . . . . right'
+                        'left . . . . . . . . . . right'
+                        'left . . . . . . . . . . right'
+                        'left . . . . . . . . . . right'
+                        'left . . . . . . . . . . right'
+                        'left . . . . . . . . . . right'
+                        'left . . . . . . . . . . right'
+                        'left . . . . . . . . . . right';
+}
+.grid-item{
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+    position: relative;
+}
+#secret-pebble:hover{
+    background-color: rgb(225, 228, 228);
+    box-shadow: 2px 2px 4px black;
+    animation-name: vibrate;
+    animation-duration: 0.1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes vibrate {
+    10%,90%{
+        transform: translate3d(-1px, 0, 0);
+    }
+      
+    20%,80%{
+        transform: translate3d(1px, -1px, 0);
+    }
+    
+    30%,70%{
+        transform: translate3d(-1.5px, 1px, 0);
+    }
+    
+    40%,60% {
+        transform: translate3d(1.5px, -1.5px, 0);
+    }
+    50%{
+        transform: translate3d(-1.5px, 1.5px, 0);
+    }
+}
+.message1{
+    grid-area: left;
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    width: 400px;
+    color: rgb(255, 255, 255);
+    align-content: center;
+    text-align: center;
+}
+.message2{
+    grid-area: right;
+    background-color: rgb(255, 253, 253);
+    height: 400px;
+    width: 400px;
+    color: rgb(255, 255, 255);
+    align-content: center;
+    text-align: center;
+}
+#secret-pebble:active{
+    background-color: black;
+}
+#secret-pebble:active::before{
+    display: flex;
+    content: "I am Pulkit";
+    position: absolute;
+    left: 10em;
+    top:-14em;
+    background-color: hsla(43, 100%, 50%, 0.812);
+    width: 400px;
+    height: 400px;
+    font-size: larger;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+#secret-pebble:active::after{
+    display: flex;
+    content: "Hello";
+    position: absolute;
+    left: -36em;
+    top:-14em;
+    font-size: larger;
+    background-color: rgb(0, 123, 255);
+    width: 400px;
+    height: 400px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#pebbleupdia:hover{
+    background-color: rgb(225, 228, 228);
+    box-shadow: 3px 3px 4px black;
+    animation-name: updiagonal;
+    animation-duration: 0.5s;
+    
+}
+@keyframes updiagonal {
+    from{
+        right: 0px;
+        bottom: 0px;
+    }
+    to{
+        right: -4px;
+        bottom: -4px;
+    }
+}
+#pebblelowdia:hover{
+    background-color: rgb(225, 228, 228);
+    box-shadow: 3px 3px 4px black;
+    animation-name: lowdiagonal;
+    animation-duration: 0.5s;
+    }
+@keyframes lowdiagonal {
+    from{
+        right: 0px;
+        bottom: 0px;
+    }
+    to{
+        right: 4px;
+        bottom: 4px;
+    }
+}
+#leftrowpart:hover{
+    background-color: rgb(225, 228, 228);
+    box-shadow: 3px 3px 4px black;
+    animation-name: leftrow;
+    animation-duration: 0.5s;
+}
+@keyframes leftrow{
+    from{
+        left:0px;
+    }
+    to{
+        left:4px;
+    }
+}
+#rightrowpart:hover{
+    background-color: rgb(225, 228, 228);
+    box-shadow: 3px 3px 4px black;
+    animation-name: rightrow;
+    animation-duration: 0.5s;
+}
+@keyframes rightrow{
+    from{
+        left:0px;
+    }
+    to{
+        left:-4px;
+    }
+}
+#upcolumnpart:hover{
+    background-color: rgb(225, 228, 228);
+    box-shadow: 3px 3px 4px black;
+    animation-name: upcolumn;
+    animation-duration: 0.5s;
+}
+@keyframes upcolumn {
+    from{
+        top: 0px;
+    }
+    to{
+        top: 4px;
+    }
+}
+#lowcolumnpart:hover{
+    background-color: rgb(225, 228, 228);
+    box-shadow: 3px 3px 4px black;
+    animation-name: lowcolumn;
+    animation-duration: 0.5s;
+}
+@keyframes lowcolumn {
+    from{
+        top: 0px;
+    }
+    to{
+        top: -4px;
+    }
+}
+#lowoffcdia:hover{
+    background-color: rgb(225, 228, 228);
+    box-shadow: 3px 3px 4px black;
+    animation-name: lowoffc;
+    animation-duration: 0.5s;
+}
+@keyframes lowoffc {
+    from{
+        top:0px;
+        left:0px;
+    }
+    to{
+        top:-4px;
+        left: 8px;
+    }
+}
+#upoffcdia:hover{
+    background-color: rgb(225, 228, 228);
+    box-shadow: 3px 3px 4px black;
+    animation-name: upoffc;
+    animation-duration: 0.5s;
+}
+@keyframes upoffc {
+    from{
+        top:0px;
+        left:0px;
+    }
+    to{
+        top: 8px;
+        left: -4px;
+    }
+}
+.grid-item:hover{
+    box-shadow: 2px 2px 4px black;
+    animation-name: vibrate;
+    animation-duration: 0.1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
