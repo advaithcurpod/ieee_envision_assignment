@@ -3,7 +3,7 @@ body {
 }
 
 #heading {
-    color: rgb(255, 242, 0);
+    color: rgb(241, 230, 19);
     text-align: center;
     font-family: "Monaco",monospace;
     padding: 5% 15% 3% 15%;
@@ -36,6 +36,7 @@ img {
 
 img:hover {
     animation: shake 0.7s infinite;
+    box-shadow: 0px 0px #00ffff;
 }
 
 #i00:hover, #i11:hover, #i22:hover, #i33:hover, #i44:hover, #i55:hover {
@@ -73,7 +74,24 @@ img:hover {
     animation-timing-function: linear;
 }
 
+#i75:hover, #i84:hover, #i93:hover {
+    animation: diag-ru 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+#i57:hover, #i48:hover, #i39:hover {
+    animation: diag-ld 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
 
+@keyframes diag-ru {
+    0% {transform: translate(1px,-1px);}
+    25% {transform: translate(2px,-2px);}
+    50% {transform: translate(3px,-3px);}
+    75% {transform: translate(4px,-4px);}
+    100% {transform: translate(5px,-5px);}
+}
 @keyframes diag-rd {
     0% {transform: translate(1px,1px);}
     25% {transform: translate(2px,2px);}
@@ -87,6 +105,13 @@ img:hover {
     50% {transform: translate(-3px,-3px);}
     75% {transform: translate(-4px,-4px);}
     100% {transform: translate(-5px,-5px);}
+}
+@keyframes diag-ld {
+    0% {transform: translate(-1px,1px);}
+    25% {transform: translate(-2px,2px);}
+    50% {transform: translate(-3px,3px);}
+    75% {transform: translate(-4px,4px);}
+    100% {transform: translate(-5px,5px);}
 }
 @keyframes v-d {
     0% {transform: translate( 0px,1px);}
