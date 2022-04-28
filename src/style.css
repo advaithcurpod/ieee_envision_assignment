@@ -1,0 +1,194 @@
+body {
+    background-color: black;
+}
+
+#heading {
+    color: rgb(241, 230, 19);
+    text-align: center;
+    font-family: "Monaco",monospace;
+    padding: 5% 15% 3% 15%;
+}
+
+#heading h1 {
+    padding: 0%;
+    margin: 0%;
+    text-shadow: 3px 3px 5px yellowgreen;
+}
+
+#heading hr {
+    padding: 0%;
+    margin: 0%;
+}
+
+/* contains grid + secret message */
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.grid {
+    margin: 0px -30px 0px -60px;
+}
+
+.hid_mes {
+    background-image: url("dribble.gif");
+    background-size:cover;
+    background-repeat: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    border: 2px solid aqua;
+    color: rgb(47, 234, 240);
+    font: 20px  "Space Mono", monospace;
+    font-variant: small-caps;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+ul {
+    width: 400px;
+    line-height: 30px;
+    list-style-type: none;
+}
+
+li {
+    text-align: center;
+}
+
+img {
+    max-width: 20px;
+    padding: 0px 4px;
+}
+
+img:hover {
+    animation: shake 0.7s infinite;
+    box-shadow: 0px 0px #00ffff;
+}
+
+#i00:hover, #i11:hover, #i22:hover, #i33:hover, #i44:hover, #i55:hover {
+    animation: diag-rd 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#i77:hover, #i88:hover, #i99:hover {
+    animation: diag-lu 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+} 
+
+#i60:hover, #i61:hover, #i62:hover, #i63:hover, #i64:hover, #i65:hover {
+    animation: h-r 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#i67:hover, #i68:hover, #i69:hover {
+    animation: h-l 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#i06:hover, #i16:hover, #i26:hover, #i36:hover, #i46:hover, #i56:hover {
+    animation: v-d 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+#i76:hover, #i86:hover, #i96:hover {
+    animation: v-u 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#i75:hover, #i84:hover, #i93:hover {
+    animation: diag-ru 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+#i57:hover, #i48:hover, #i39:hover {
+    animation: diag-ld 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes diag-ru {
+    0% {transform: translate(1px,-1px);}
+    25% {transform: translate(2px,-2px);}
+    50% {transform: translate(3px,-3px);}
+    75% {transform: translate(4px,-4px);}
+    100% {transform: translate(5px,-5px);}
+}
+@keyframes diag-rd {
+    0% {transform: translate(1px,1px);}
+    25% {transform: translate(2px,2px);}
+    50% {transform: translate(3px,3px);}
+    75% {transform: translate(4px,4px);}
+    100% {transform: translate(5px,5px);}
+}
+@keyframes diag-lu {
+    0% {transform: translate(-1px,-1px);}
+    25% {transform: translate(-2px,-2px);}
+    50% {transform: translate(-3px,-3px);}
+    75% {transform: translate(-4px,-4px);}
+    100% {transform: translate(-5px,-5px);}
+}
+@keyframes diag-ld {
+    0% {transform: translate(-1px,1px);}
+    25% {transform: translate(-2px,2px);}
+    50% {transform: translate(-3px,3px);}
+    75% {transform: translate(-4px,4px);}
+    100% {transform: translate(-5px,5px);}
+}
+@keyframes v-d {
+    0% {transform: translate( 0px,1px);}
+    25% {transform: translate( 0px,2px);}
+    50% {transform: translate( 0px,3px);}
+    75% {transform: translate( 0px,4px);}
+    100% {transform: translate( 0px,5px);}
+}
+@keyframes v-u {
+    0% {transform: translate( 0px,-1px);}
+    25% {transform: translate( 0px,-2px);}
+    50% {transform: translate( 0px,-3px);}
+    75% {transform: translate( 0px,-4px);}
+    100% {transform: translate( 0px,-5px);}
+}
+@keyframes h-r {
+    0% {transform: translate( 1px, 0px);}
+    25% {transform: translate( 2px, 0px);}
+    50% {transform: translate( 3px, 0px);}
+    75% {transform: translate( 4px, 0px);}
+    100% {transform: translate( 5px, 0px);}
+}
+@keyframes h-l {
+    0% {transform: translate( -1px, 0px);}
+    25% {transform: translate( -2px, 0px);}
+    50% {transform: translate( -3px, 0px);}
+    75% {transform: translate( -4px, 0px);}
+    100% {transform: translate( -5px, 0px);}
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px); }
+    10% { transform: translate(-1px, -2px); }
+    20% { transform: translate(-3px, 0px); }
+    30% { transform: translate(3px, 2px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 2px); }
+    60% { transform: translate(-3px, 1px); }
+    70% { transform: translate(3px, 1px); }
+    80% { transform: translate(-1px, -1px); }
+    90% { transform: translate(1px, 2px); }
+    100% { transform: translate(1px, -2px); }
+}
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 2px #fff;
+    }
+    50%{
+      text-shadow: 0 0 4px #fff, 0 0 2px #66f35c, 0 0 3px #00faab;
+    }
+    100% {
+        text-shadow: 0 0 4px #66f35c, 0 0 5px #00faab, 0 0 7px #fff;
+    }
+}
