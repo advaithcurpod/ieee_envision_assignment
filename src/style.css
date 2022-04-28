@@ -23,6 +23,7 @@
    
 }
 
+
     
 
 @keyframes vibration {
@@ -89,11 +90,11 @@ box-shadow:1px 1px ;
 }
 
  #sp{
-    background-color: aquamarine;
+    background-color: rgb(12, 37, 178);
     
 }
 #sp:hover{
-    /* background-color: red; */
+    background-color: red;
     animation:vibration 0.5s;
 
     
@@ -102,3 +103,33 @@ box-shadow:1px 1px ;
     background:black;
     
 }
+[data]:active::after{
+    content: attr(data);
+    font-size: small;
+     top: 100%;
+    left: 100%; 
+    border: 2px solid red;
+    margin: 12px;
+    padding: 12px;
+    position: absolute;
+    }
+
+     [data]{
+         position: relative; 
+
+    }  
+[data-2]:active::before{
+    content: attr(data-2);
+    font-size: small;
+     top: 100%;
+    right: 100%; 
+    border: 2px solid red;
+    margin: 12px;
+    position: absolute;
+    }
+
+     [data-2]{
+         position: relative; 
+         
+
+    }  
