@@ -20,18 +20,45 @@ body {
     margin: 0%;
 }
 
+/* contains grid + secret message */
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.grid {
+    margin: 0px -30px 0px -60px;
+}
+
+.hid_mes {
+    background-image: url("dribble.gif");
+    background-size:cover;
+    background-repeat: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    border: 2px solid aqua;
+    color: rgb(47, 234, 240);
+    font: 20px  "Space Mono", monospace;
+    font-variant: small-caps;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
 ul {
-    text-align: center;
-    line-height: 5px;
+    width: 400px;
+    line-height: 30px;
+    list-style-type: none;
 }
 
 li {
-    display: inline;
-    padding: 5px;
+    text-align: center;
 }
 
 img {
     max-width: 20px;
+    padding: 0px 4px;
 }
 
 img:hover {
@@ -153,5 +180,15 @@ img:hover {
     80% { transform: translate(-1px, -1px); }
     90% { transform: translate(1px, 2px); }
     100% { transform: translate(1px, -2px); }
-  }
-
+}
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 2px #fff;
+    }
+    50%{
+      text-shadow: 0 0 4px #fff, 0 0 2px #66f35c, 0 0 3px #00faab;
+    }
+    100% {
+        text-shadow: 0 0 4px #66f35c, 0 0 5px #00faab, 0 0 7px #fff;
+    }
+}
