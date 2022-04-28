@@ -1,23 +1,37 @@
+h1{
+    align-items: center;
+    justify-content: center;
+     display: flex; 
+     
+}
 .container {
+    
     display: grid;
     grid-template-columns: repeat(10,auto);
     grid-template-rows: repeat(10,auto);
-    grid-gap: 1px;
-    
+     grid-gap:12px 20px; 
+    align-items: center;
+    justify-content: center;
+    width: 179px;
+    height: 201px;
+    margin: 20px auto;
+    /* padding: 200px 200px; */
+
 }
 
 .grids { 
+    display: block;
     border: 2px solid black;
     border-style: solid;
     border-radius: 12px;
-    width: 0px;
-    margin: 0px;
+   width: 0px;
+    margin: 2px 0px;
     padding: 5px; 
     transition: transform 0.5s;
-   ;
-
 
 }
+
+
 #random:hover{
     animation:vibration 0.5s;
    
@@ -99,37 +113,40 @@ box-shadow:1px 1px ;
 
     
 }
-#sp:active{
+/* #sp:active{
     background:black;
     
+} */
+#sp:active::before{
+    display: flex;
+    content: "hello";
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items:  center;
+    
+
+    
 }
-[data]:active::after{
-    content: attr(data);
-    font-size: small;
-     top: 100%;
-    left: 100%; 
-    border: 2px solid red;
-    margin: 12px;
-    padding: 12px;
+#sp:active::after{
+    display: flex;
+    content: "I am Bhavya";
     position: absolute;
-    }
+    right: 5%;
+    top: 15%;
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items:  center;
+    
 
-     [data]{
-         position: relative; 
+    
+}
 
-    }  
-[data-2]:active::before{
-    content: attr(data-2);
-    font-size: small;
-     top: 100%;
-    right: 100%; 
-    border: 2px solid red;
-    margin: 12px;
-    position: absolute;
-    }
 
-     [data-2]{
-         position: relative; 
-         
-
-    }  
+    
