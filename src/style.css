@@ -1,0 +1,140 @@
+div.main {
+    display: flex;
+}
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+span.pebble {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 8px;
+    transition: 1s;
+}
+#N:hover {
+    animation: shake 0.75s;
+    box-shadow: 0px 0px 4px;
+}
+#sp:hover {
+    animation: shake 0.75s;
+    box-shadow: 0px 0px 4px;
+}
+@keyframes shake {
+    10%, 50% {transform: translate3d(-4px, 0, 0);}
+    20%, 60%, 90% {transform: translate3d(0, -4px, 0);}
+    30%, 70%, 100% {transform: translate3d(0, 4px, 0);}
+    40%, 80% {transform: translate3d(4px, 0, 0);}
+}
+#sp:active {
+    background-color: black;
+}
+#sp:active > #Blue::after{
+    height: 350px;
+    width: 350px;
+    background-color: blue;
+    content: "Congratulations!!!!";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    color: white;
+    text-align: center;
+    line-height: 350px;
+    position: absolute;
+    left: 100px;
+    top: 120px;
+    margin: auto;
+}
+#sp:active > #Red::after{
+    height: 350px;
+    width: 350px;
+    background-color: red;
+    content: "You have found the pebble!";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    color: white;
+    text-align: center;
+    line-height: 350px;
+    position: absolute;
+    right: 100px;
+    top: 120px;
+    margin: auto;
+}
+#SR:hover{
+    animation: rmove 1s;
+    box-shadow: -5px 0px;
+    background-color: lightgray;
+    animation-fill-mode: forwards;
+}
+@keyframes rmove {
+    to {transform: translate3d(5px, 0, 0);}
+}
+#SL:hover{
+    animation: lmove 1s;
+    box-shadow: 5px 0px;
+    background-color: lightgray;
+    animation-fill-mode: forwards;
+}
+@keyframes lmove {
+    to {transform: translate3d(-5px, 0, 0);}
+}
+#SD:hover{
+    animation: dmove 1s;
+    box-shadow: 0px -5px;
+    background-color: lightgray;
+    animation-fill-mode: forwards;
+}
+@keyframes dmove {
+    to {transform: translate3d(0,5px,0);}
+}
+#SU:hover{
+    animation: umove 1s;
+    box-shadow: 0px 5px;
+    background-color: lightgray;
+    animation-fill-mode: forwards;
+}
+@keyframes umove {
+    to {transform: translate3d(0,-5px,0);}
+}
+#RD:hover{
+    animation: rdmove 1s;
+    box-shadow: -3px -4px;
+    background-color: lightgray;
+    animation-fill-mode: forwards;
+}
+@keyframes rdmove {
+    to {transform: translate3d(4px,3px,0);}
+}
+#LU:hover{
+    animation: lumove 1s;
+    box-shadow: 3px 4px;
+    background-color: lightgray;
+    animation-fill-mode: forwards;
+}
+@keyframes lumove {
+    to {transform: translate3d(-4px,-3px,0);}
+}
+#RU:hover{
+    animation: rumove 1s;
+    box-shadow: -3px 4px;
+    background-color: lightgray;
+    animation-fill-mode: forwards;
+}
+@keyframes rumove {
+    to {transform: translate3d(4px,-3px,0);}
+}
+#LD:hover{
+    animation: ldmove 1s;
+    box-shadow: 3px -4px;
+    background-color: lightgray;
+    animation-fill-mode: forwards;
+}
+@keyframes ldmove {
+    to {transform: translate3d(-4px,3px,0);}
+}
+body {
+    background-color: white;
+    text-align: center;
+}
